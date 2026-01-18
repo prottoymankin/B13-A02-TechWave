@@ -36,14 +36,22 @@ html {
   line-height: 24px;
 }
 
-.primary-btn {
+.primary-btn,
+.secondary-btn {
   background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
   border: 1px solid #000000;
   border-radius: 50px;
   color: #FFFFFF;
+  cursor: pointer;
   font-size: 1.6rem;
   font-weight: 600;
   padding: 12px 16px;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #00FF88;
+  color: #00FF88;
 }
 
 /* Header Section CSS */
@@ -87,19 +95,118 @@ header {
   display: none;
 }
 
-@media screen and (min-width: 577px) {
-  
+/* Hero Section CSS */
+.hero {
+  background-image: url("./assets/hero-bg.png");
+  background-size: cover;
+  background-position: top;
+  padding: 40px 20px;
 }
 
-@media screen and (min-width: 769px) {
-  .menu-icon {
-    display: none;
+.hero-img-container {
+  position: relative;
+  margin: 0 auto 24px;
+  max-width: 250px;
+}
+
+#hero-circle {
+  width: 100%;
+}
+
+#hero-img {
+  max-width: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.batch {
+  background-color: #00FF88;
+  border-radius: 50px;
+  box-shadow: 0 3px 27px 0 rgba(0,255,136,0.5);
+  color: #1A0B2E;
+  font-size: 1.6rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 16px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+
+.hero-content {
+  color: #FFFFFF;
+  margin-inline: auto;
+  max-width: 550px;
+  text-align: center;
+}
+
+.hero-content > h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero-content > p {
+  margin: 8px auto 24px;
+  max-width: 400px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Responsive CSS */
+@media screen and (min-width: 577px) {
+  /* Hero Section Responsive CSS */
+  .hero-img-container {
+    max-width: 300px;
   }
+
+  .batch {
+    right: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Navbar Section Responsive CSS */
   .navbar-menu {
     display: flex;
   }
-
+  
   .navbar > button {
     display: block;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  /* Hero Section Responsive CSS */
+  .hero-content > h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Hero Section Responsive CSS */
+  .hero-img-container {
+    max-width: 350px;
+  }
+
+  .batch {
+    font-size: 1.8rem;
+    right: 40px;
+    top: 10px;
+  }
+
+  .hero-content > h1 {
+    font-size: 6rem;
+  }
+
+  #hero-img {
+    max-width: 200px;
   }
 }
