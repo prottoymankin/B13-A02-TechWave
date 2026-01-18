@@ -20,8 +20,9 @@ html {
 
 .heading-md {
   color: #FFFFFF;
-  font-size: 4.8rem;
+  font-size: 3.2rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .heading-sm {
@@ -158,6 +159,46 @@ header {
   justify-content: center;
 }
 
+/* About Section CSS */
+.about {
+  background-color: #1A0B2E;
+  padding: 40px 20px;
+}
+
+.about-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px auto 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+.horizontal-line {
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 1px;
+  margin-block: 40px;
+}
+
+.stats-container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-inline: auto;
+  max-width: 400px;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h1 {
+  color: #00FF88;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
 /* Responsive CSS */
 @media screen and (min-width: 577px) {
   /* Hero Section Responsive CSS */
@@ -171,6 +212,10 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+  .heading-md {
+    font-size: 4rem;
+  }
+
   /* Navbar Section Responsive CSS */
   .navbar-menu {
     display: flex;
@@ -185,12 +230,29 @@ header {
   }
 
   /* Hero Section Responsive CSS */
+  .hero {
+    padding: 60px 20px;
+  }
+
   .hero-content > h1 {
     font-size: 5rem;
   }
+
+  /* About Section Responsive CSS */
+  .about-desc {
+    max-width: 800px;
+  }
+
+  .horizontal-line {
+    margin-block: 80px;
+  }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
+  .heading-md {
+    font-size: 4.8rem;
+  }
+
   /* Hero Section Responsive CSS */
   .hero-img-container {
     max-width: 350px;
@@ -202,11 +264,33 @@ header {
     top: 10px;
   }
 
+  .hero {
+    padding-block: 100px;
+  }
+
   .hero-content > h1 {
     font-size: 6rem;
   }
 
   #hero-img {
     max-width: 200px;
+  }
+
+  /* About Section Responsive CSS */
+  .about {
+    padding: 50px 0 120px;
+  }
+
+  .horizontal-line {
+    margin-block: 80px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+  }
+
+  .stat-card h1 {
+    font-size: 4.8rem;
   }
 }
