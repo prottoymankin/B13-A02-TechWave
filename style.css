@@ -8,3 +8,98 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 }
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.heading-md {
+  color: #FFFFFF;
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+.heading-sm {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.text-base {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+
+.primary-btn {
+  background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
+  border: 1px solid #000000;
+  border-radius: 50px;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 12px 16px;
+}
+
+/* Header Section CSS */
+header {
+  background-color: #1A0B2E;
+  padding: 24px 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo > span {
+  background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
+  background-clip: text;
+  color: transparent
+}
+
+.navbar-menu {
+  font-size: 1.6rem;
+  display: none;
+  gap: 32px;
+  list-style: none;
+}
+
+.menu-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.navbar > button {
+  display: none;
+}
+
+@media screen and (min-width: 577px) {
+  
+}
+
+@media screen and (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+  .navbar-menu {
+    display: flex;
+  }
+
+  .navbar > button {
+    display: block;
+  }
+}
