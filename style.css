@@ -27,7 +27,7 @@ html {
 
 .heading-sm {
   color: #FFFFFF;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
@@ -199,6 +199,28 @@ header {
   margin-bottom: 16px;
 }
 
+/* Choose Section CSS */
+.choose {
+  background-color: #230E3D;
+  padding: 40px 20px;
+}
+
+.choose-card-container {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.choose-card {
+  background-color: rgba(53, 17, 101, 0.4);
+  border-radius: 24px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
 /* Responsive CSS */
 @media screen and (min-width: 577px) {
   /* Hero Section Responsive CSS */
@@ -214,6 +236,10 @@ header {
 @media screen and (min-width: 768px) {
   .heading-md {
     font-size: 4rem;
+  }
+
+  .heading-sm {
+    font-size: 2.4rem;
   }
 
   /* Navbar Section Responsive CSS */
@@ -245,6 +271,16 @@ header {
 
   .horizontal-line {
     margin-block: 80px;
+  }
+
+  /* Choose Section Responsive CSS */
+  .choose {
+    padding: 80px 0px;
+  }
+  .choose-card-container {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
   }
 }
 
@@ -292,5 +328,28 @@ header {
 
   .stat-card h1 {
     font-size: 4.8rem;
+  }
+
+  /* Choose Card Section Responsive CSS  */
+  .choose {
+    padding: 120px 0px;
+  }
+
+  .choose-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .choose-card {
+    justify-content: center;
+  }
+
+  .choose-card:first-child {
+    grid-row: span 2;
+  }
+
+  .choose-card:nth-child(2),
+  .choose-card:nth-child(3),
+  .choose-card:nth-child(4)  {
+    grid-column: span 2;
   }
 }
