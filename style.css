@@ -18,11 +18,18 @@ html {
   margin-inline: auto;
 }
 
+.text-linear-gradient {
+  background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
+  background-clip: text;
+  color: transparent
+}
+
 .heading-md {
   color: #FFFFFF;
   font-size: 3.2rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .heading-sm {
@@ -83,12 +90,6 @@ header {
   font-size: 3rem;
   font-weight: 700;
   text-decoration: none;
-}
-
-.logo > span {
-  background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
-  background-clip: text;
-  color: transparent
 }
 
 .navbar-menu {
@@ -175,7 +176,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 16px auto 0;
+  margin: 0 auto;
   max-width: 600px;
   text-align: center;
 }
@@ -213,7 +214,6 @@ header {
 .choose-card-container {
   display: grid;
   gap: 16px;
-  margin-top: 16px;
 }
 
 .choose-card {
@@ -231,7 +231,6 @@ header {
   display: grid;
   gap: 16px;
   justify-content: center;
-  margin-top: 24px;
   max-width: 400px;
 }
 
@@ -250,6 +249,10 @@ header {
   padding: 16px;
 }
 
+.featured-card-content > span {
+  color: #00FF88;
+}
+
 /* Host Section CSS */
 .host-card {
   background-color: rgba(53, 17, 101,0.4);
@@ -258,7 +261,6 @@ header {
   align-items: center;
   flex-direction: column;
   gap: 16px;
-  margin-top: 24px;
   padding: 24px;
 }
 
@@ -308,12 +310,6 @@ footer {
   text-decoration: none;
 }
 
-.footer-logo span {
-  background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
-  background-clip: text;
-  color: transparent
-}
-
 .platforms {
   display: flex;
   flex-direction: column;
@@ -347,6 +343,7 @@ footer {
 @media screen and (min-width: 768px) {
   .heading-md {
     font-size: 4rem;
+    margin-bottom: 32px;
   }
 
   .heading-sm {
@@ -394,7 +391,6 @@ footer {
   .choose-card-container {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 40px;
   }
 
   /* Featured Section Responsive CSS */
@@ -438,6 +434,7 @@ footer {
 @media screen and (min-width: 992px) {
   .heading-md {
     font-size: 4.8rem;
+    margin-bottom: 40px;
   }
 
   .about,
@@ -509,7 +506,6 @@ footer {
   /* Featured Section Responsive CSS */
   .featured-card-container {
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 40px;
     max-width: 1200px;
   }
 
