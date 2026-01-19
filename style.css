@@ -120,6 +120,21 @@ header {
   position: relative;
   margin: 0 auto 24px;
   max-width: 250px;
+  animation: floating 2.5s linear infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
 }
 
 #hero-circle {
