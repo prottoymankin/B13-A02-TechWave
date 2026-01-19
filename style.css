@@ -47,7 +47,7 @@ html {
 .primary-btn,
 .secondary-btn {
   background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
-  border: 1px solid #000000;
+  border: none;
   border-radius: 50px;
   color: #FFFFFF;
   cursor: pointer;
@@ -456,6 +456,32 @@ footer {
   .choose,
   .featured {
     padding: 120px 20px;
+  }
+
+  .navbar button {
+    animation: glow 1.5s linear infinite;
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0px 0px 0px 0px #fb09b200;
+    }
+
+    25% {
+      box-shadow: 0px 0px 0px 3px #fb09b2a4;
+    }
+
+    50% {
+      box-shadow: 0px 0px 0px 6px #fb09b24b;
+    }
+
+    75% {
+      box-shadow: 0px 0px 0px 8px #fb09b200;
+    }
+
+    100% {
+      box-shadow: 0px 0px 0px 0px #fb09b200;
+    }
   }
 
   /* Hero Section Responsive CSS */
