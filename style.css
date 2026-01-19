@@ -55,6 +55,17 @@ html {
   color: #00FF88;
 }
 
+main {
+  background-color: #1A0B2E;
+}
+
+.about,
+.choose,
+.featured,
+.host {
+  padding: 40px 20px;
+}
+
 /* Header Section CSS */
 header {
   background-color: #1A0B2E;
@@ -160,11 +171,6 @@ header {
 }
 
 /* About Section CSS */
-.about {
-  background-color: #1A0B2E;
-  padding: 40px 20px;
-}
-
 .about-desc {
   display: flex;
   flex-direction: column;
@@ -202,7 +208,6 @@ header {
 /* Choose Section CSS */
 .choose {
   background-color: #230E3D;
-  padding: 40px 20px;
 }
 
 .choose-card-container {
@@ -222,11 +227,6 @@ header {
 }
 
 /* Featured Section CSS */
-.featured {
-  background-color: #1A0B2E;
-  padding: 40px 20px;
-}
-
 .featured-card-container {
   display: grid;
   gap: 16px;
@@ -237,17 +237,54 @@ header {
 
 .featured-card {
   background-color: #250D44;
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  border-radius: 24px;
   overflow: hidden;
 }
 
 .featured-card-content {
-  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 16px;
+}
+
+/* Host Section CSS */
+.host-card {
+  background-color: rgba(53, 17, 101,0.4);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 24px;
+}
+
+.about-host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.social-container a {
+  border: 1px solid #533C72;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
 }
 
 /* Responsive CSS */
@@ -269,6 +306,12 @@ header {
 
   .heading-sm {
     font-size: 2.4rem;
+  }
+
+  .about,
+  .choose,
+  .featured {
+    padding: 80px 20px;
   }
 
   /* Navbar Section Responsive CSS */
@@ -303,9 +346,6 @@ header {
   }
 
   /* Choose Section Responsive CSS */
-  .choose {
-    padding: 80px 0px;
-  }
   .choose-card-container {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
@@ -313,19 +353,37 @@ header {
   }
 
   /* Featured Section Responsive CSS */
-  .featured {
-    padding: 80px 0;
-  }
-
   .featured-card-container {
     grid-template-columns: repeat(2, 1fr);
     max-width: 900px;
+  }
+
+  /* Host Section Responsive CSS */
+  .host {
+    padding: 0px 20px 80px;
+  }
+
+  .host-card {
+    flex-direction: row;
+    gap: 24px;
+    padding: 40px;
+  }
+
+  .about-host {
+    align-items: start;
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 992px) {
   .heading-md {
     font-size: 4.8rem;
+  }
+
+  .about,
+  .choose,
+  .featured {
+    padding: 120px 20px;
   }
 
   /* Hero Section Responsive CSS */
@@ -353,7 +411,7 @@ header {
 
   /* About Section Responsive CSS */
   .about {
-    padding: 50px 0 120px;
+    padding-top: 80px;
   }
 
   .horizontal-line {
@@ -370,10 +428,6 @@ header {
   }
 
   /* Choose Card Section Responsive CSS  */
-  .choose {
-    padding: 120px 0px;
-  }
-
   .choose-card-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -393,13 +447,14 @@ header {
   }
 
   /* Featured Section Responsive CSS */
-  .featured {
-    padding: 120px 0;
-  }
-
   .featured-card-container {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px;
     margin-top: 40px;
+    max-width: 1200px;
+  }
+
+  /* Host Section Responsive CSS */
+  .host {
+    padding: 0px 20px 120px;
   }
 }
