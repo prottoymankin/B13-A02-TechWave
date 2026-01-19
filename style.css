@@ -287,6 +287,51 @@ header {
   width: 40px;
 }
 
+/* Footer Section CSS */
+footer {
+  background-image: url("./assets/footer-bg.png");
+  background-size: cover;
+  background-position: center;
+  padding-block: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-logo {
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: 700; 
+  text-decoration: none;
+}
+
+.footer-logo span {
+  background: linear-gradient(to bottom left, #9100F8, #FB09B4, #F7E93F);
+  background-clip: text;
+  color: transparent
+}
+
+.platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.platforms-icon-container {
+  display: flex;
+  gap: 16px;
+}
+
+.platforms-icon-container div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Responsive CSS */
 @media screen and (min-width: 577px) {
   /* Hero Section Responsive CSS */
@@ -373,6 +418,21 @@ header {
     align-items: start;
     text-align: left;
   }
+
+  /* Footer Section Responsive CSS */
+  footer {
+    padding-block: 80px;
+    gap: 32px;
+  }
+
+  .footer-logo {
+    font-size: 4.8rem;
+  }
+
+  .platforms {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -456,5 +516,24 @@ header {
   /* Host Section Responsive CSS */
   .host {
     padding: 0px 20px 120px;
+  }
+
+  /* Footer Section Responsive CSS */
+  footer {
+    padding-block: 120px;
+  }
+
+  .footer-logo {
+    font-size: 5.4rem;
+  }
+
+  .platforms {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .platforms-icon-container {
+    gap: 40px;
   }
 }
